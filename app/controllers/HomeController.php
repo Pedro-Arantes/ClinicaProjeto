@@ -14,7 +14,7 @@ class HomeController extends Controller{
 
        $dados["view"] = "index";
 
-       $this->load("template",$dados);
+       $this->load("temp",$dados);
 
    } 
 
