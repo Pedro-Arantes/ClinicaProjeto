@@ -35,5 +35,30 @@ class Login extends Model{
 
     }
 
+    public function contar(){
+
+        $sqlPac = "SELECT * FROM pacientes";
+        $sqlFunc = "SELECT * FROM funcionarios";
+        $sqlCons = "SELECT * FROM consultas";
+        $qryPac = $this->db->query($sqlPac);
+        $qryFunc = $this->db->query($sqlFunc);
+        $qryCons = $this->db->query($sqlCons);
+        $arrayqryP = $qryPac->fetchALL(\PDO::FETCH_OBJ);
+        $arrayqryF = $qryFunc->fetchALL(\PDO::FETCH_OBJ);
+        $arrayqryC = $qryCons->fetchALL(\PDO::FETCH_OBJ);
+        
+        
+        $CountPac = count($arrayqryP);
+        $CountFunc = count($arrayqryF);
+        $CountCons = count($arrayqryC);
+  
+        $this->CountPac =$CountPac;
+        $this->CountFunc =$CountFunc;
+        $this->CountCons =$CountCons;
+  
+        
+    }
+  
+
     
 }

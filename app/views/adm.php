@@ -1,3 +1,25 @@
+<?php
+namespace app\models;
+use app\controllers\LoginController;
+
+//Segurança para impedir MySql injection.
+if ( $_SERVER['REQUEST_METHOD']=='GET' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) {
+  header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
+
+
+  die ("<h2>Accesso Negado!</h2> Este Arquivo é protegido e não é disponivel ao publico.");
+}
+
+//contadores
+
+
+
+$objCount = new LoginController;
+$objCount->IniciarContagem();
+
+        
+        
+?>
 
 
 <!DOCTYPE html>
@@ -73,9 +95,11 @@
           <li><a class="nav-link scrollto active" href="<?php echo URL_BASE ?>/index.php">Pagina Inicial</a></li>
           <li><a  class="nav-link scrollto " href="<?php echo URL_BASE."paciente/create" ?>">Novo Paciente</a></li>
           <li><a class="nav-link scrollto " href="<?php echo URL_BASE ."Paciente" ?>">Lista de Pacientes</a></li>
+          <li><a  class="nav-link scrollto " href="<?php echo URL_BASE."cadastro/create" ?>">Novo Cadastro</a></li>
+          <li><a class="nav-link scrollto " href="<?php echo URL_BASE ."cadastro" ?>">Lista de Cadastros</a></li>
           
 
-          <li><a class="btn btn-info" href="<?php echo URL_BASE ?>/login">Deslogar</a></li>
+          <li><a class="btn btn-warning" href="<?php echo URL_BASE ?>/login">Deslogar</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -86,8 +110,9 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
-      <h1>  Bem  Vindo  a  CliniMax</h1>
-      <h2>É a Clínica completa,com todas as especialidades!</h2>
+      <h1>  Bem  Vindo  Administrador</h1>
+      <h2>Esta e a pagina de acesso, para a realização de alterações ao sistema.</h2>
+      
       <a href="#about" class="btn-get-started scrollto">Conheça</a>
     </div>
   </section><!-- End Hero -->
@@ -109,7 +134,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="fas fa-user-md"></i>
-              <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="<?php echo $objCount->funcionarios ?>" data-purecounter-duration="1" class="purecounter"></span>
               <p>Doutores</p>
             </div>
           </div>
@@ -117,15 +142,15 @@
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="far fa-hospital"></i>
-              <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Departamentos</p>
+              <span data-purecounter-start="0" data-purecounter-end="<?php echo $objCount->consultas ?>" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Consultas</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="fas fa-flask"></i>
-              <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="<?php echo $objCount->pacientes ?>" data-purecounter-duration="1" class="purecounter"></span>
               <p>Pacientes</p>
             </div>
           </div>

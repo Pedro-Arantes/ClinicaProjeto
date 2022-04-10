@@ -45,6 +45,7 @@ class PacienteController extends Controller{
       $paciente->cpf          = $_POST["cpf"];
       $paciente->plano        = $_POST["plano"];  
       $paciente->cel          = $_POST["cel"];
+      $paciente->email          = $_POST["email"];
       
       
       

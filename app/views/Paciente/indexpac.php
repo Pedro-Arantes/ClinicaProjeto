@@ -19,6 +19,7 @@
 							<th align="left">Nome</th>
 							<th align="left">CPF</th>
 							<th align="center">Plano</th>
+							<th align="center">Email</th>
 							<th align="center">Ação</th>
 						  </tr>
 						</thead> 
@@ -29,6 +30,7 @@
 								<td><?php echo $paciente->nome; ?></td>
 								<td><?php echo $paciente->cpf; ?></td>
 								<td align="center"><?php echo $paciente->plano; ?></td>
+								<td align="center"><?php echo $paciente->email; ?></td>
 								<td align="center">
 									<a   href="<?php echo URL_BASE."paciente/edit/".$paciente->idpaciente ?>" class=" btn btn-outline-warning" title="Editar"> <img src="<?php echo URL_BASE."assets/img/editar.png"?>" alt=""> </a>
 									<a  href="<?php echo URL_BASE."paciente/excluir/".$paciente->idpaciente ?>" class="btn btn-outline-danger" title="exlcluir"><img src="<?php echo URL_BASE."assets/img/deletar.png"?>" alt=""></a>

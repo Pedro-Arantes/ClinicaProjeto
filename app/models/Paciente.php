@@ -22,7 +22,8 @@ class Paciente extends Model{
             nome        =:nome,
             cpf         =:cpf,
             plano       =:plano,
-            cel         =:cel
+            cel         =:cel,
+            email       =:email
             
             
             
@@ -33,6 +34,7 @@ class Paciente extends Model{
         $qry->bindValue(":cpf", $paciente->cpf);
         $qry->bindValue(":plano", $paciente->plano);
         $qry->bindValue(":cel", $paciente->cel);
+        $qry->bindValue(":email", $paciente->email);
         
         
         
@@ -54,7 +56,8 @@ class Paciente extends Model{
         nome =:nome,
         cpf=:cpf,
         plano=:plano,
-        cel=:cel
+        cel=:cel,
+        email=:email
        
         
         where idpaciente =:id
@@ -67,6 +70,7 @@ class Paciente extends Model{
         
         $qry->bindValue(":plano", $paciente->plano);
         $qry->bindValue(":cel", $paciente->cel);
+        $qry->bindValue(":email", $paciente->email);
         
         
         

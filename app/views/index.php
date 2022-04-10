@@ -73,6 +73,8 @@
           <li><a class="nav-link scrollto active" href="<?php echo URL_BASE ?>/index.php">Pagina Inicial</a></li>
           <li><a  class="nav-link scrollto " href="<?php echo URL_BASE."paciente/create" ?>">Novo Paciente</a></li>
           <li><a class="nav-link scrollto " href="<?php echo URL_BASE ."Paciente" ?>">Lista de Pacientes</a></li>
+          <li><a  class="nav-link scrollto " href="<?php echo URL_BASE."reserva/create" ?>">Nova Reserva</a></li>
+          <li><a class="nav-link scrollto " href="<?php echo URL_BASE ."Reserva" ?>">Lista de Reservas</a></li>
           <li><a class="nav-link scrollto" href="#departments">Departamentos</a></li>
           <li><a class="nav-link scrollto" href="#doctors">Doutores</a></li>
           

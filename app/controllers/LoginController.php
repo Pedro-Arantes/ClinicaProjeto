@@ -9,7 +9,9 @@ use app\models\Login;
 
 class LoginController extends Controller{
 
-    
+   public $pacientes;
+   public $funcionarios;
+   public $consultas;    
 
    public function index(){
 
@@ -39,6 +41,19 @@ class LoginController extends Controller{
          
        
    }
+
+   public function IniciarContagem(){
+
+      $objLogin = new Login();
+      $objLogin->contar();
+
+      
+      print_r($objLogin);
+      $this->pacientes= $objLogin->CountPac;
+      $this->funcionarios= $objLogin->CountFunc;
+      $this->consultas= $objLogin->CountCons;
+      
+    }
 
    
 
