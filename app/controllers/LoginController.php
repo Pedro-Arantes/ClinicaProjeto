@@ -17,7 +17,7 @@ class LoginController extends Controller{
 
        $dados["view"] = "login";
 
-       $this->load("template",$dados);
+       $this->load("temp",$dados);
 
    } 
 

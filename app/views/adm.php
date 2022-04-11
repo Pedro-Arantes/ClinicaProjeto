@@ -99,6 +99,8 @@ $objCount->IniciarContagem();
           <li><a class="nav-link scrollto " href="<?php echo URL_BASE ."cadastro" ?>">Lista de Cadastros</a></li>
           
 
+          
+
           <li><a class="btn btn-warning" href="<?php echo URL_BASE ?>/login">Deslogar</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

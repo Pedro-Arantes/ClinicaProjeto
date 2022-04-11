@@ -36,21 +36,21 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" id="dataTable">
 						<thead> 
 						  <tr>
-						  <th align="left">ID</th>
-							<th align="left">Nome</th>
-							<th align="left">Email</th>
-							<th align="center">Telefone</th>
-							<th align="center">Ação</th>
+						  <th  class="fs-5"align="left">ID</th>
+							<th  class="fs-5" align="left">Nome</th>
+							<th  class="fs-5" align="left">Email</th>
+							<th  class="fs-5" align="center">Telefone</th>
+							<th class="fs-5" align="center">Ação</th>
 						  </tr>
 						</thead> 
 						<tbody>
 							<?php  foreach($lista as $contato) { ?>
 							<tr>
-								<td><?php echo $contato->idcontato; ?></td>
-								<td><?php echo $contato->nome; ?></td>
-								<td><?php echo $contato->email; ?></td>
-								<td align="center"><?php echo $contato->celular; ?></td>
-								<td align="center">
+								<td class="fs-5"><?php echo $contato->idcontato; ?></td>
+								<td class="fs-5"><?php echo $contato->nome; ?></td>
+								<td class="fs-5"><?php echo $contato->email; ?></td>
+								<td class="fs-5" align="center"><?php echo $contato->celular; ?></td>
+								<td class="fs-5" align="center">
 									<a href="<?php echo URL_BASE."contato/edit/".$contato->idcontato ?>" class="btn btn-editar" title="Editar"></a>
 									<a href="<?php echo URL_BASE."contato/excluir/".$contato->idcontato ?>" class="btn btn-exlcuir" title="excluir"></a>
 								</td>

@@ -15,25 +15,25 @@
 					<table class="table table-hover table-primary table-striped" width="100%" border="0" cellspacing="0" cellpadding="0" id="dataTable">
 						<thead> 
 						  <tr>
-						  <th align="left">ID</th>
-							<th align="left">Data da Reserva</th>
-							<th align="left">Médico</th>
-							<th align="center">Sala</th>
+						  <th class="fs-5" align="left">ID</th>
+							<th class="fs-5" align="left">Data da Reserva</th>
+							<th class="fs-5" align="left">Médico</th>
+							<th  class="fs-5" align="center">Sala</th>
 							
-							<th align="center">Ação</th>
+							<th class="fs-5" align="center">Ação</th>
 						  </tr>
 						</thead> 
 						<tbody>
 							<?php  foreach($lista as $reserva) { ?>
 							<tr>
-								<td><?php echo $reserva->idreserva; ?></td>
-								<td><?php echo $reserva->dtreser; ?></td>
-								<td><?php echo $reserva->medico; ?></td>
-								<td align="center"><?php echo $reserva->sala; ?></td>
+								<td class="fs-5"><?php echo $reserva->idreserva; ?></td>
+								<td class="fs-5" ><?php echo $reserva->dtreser; ?></td>
+								<td class="fs-5" ><?php echo $reserva->medico; ?></td>
+								<td align="center" class="fs-5" ><?php echo $reserva->sala; ?></td>
 								
 								<td align="center">
-									<a   href="<?php echo URL_BASE."reserva/edit/".$reserva->idreserva ?>" class=" btn btn-outline-warning" title="Editar"> <img src="<?php echo URL_BASE."assets/img/editar.png"?>" alt=""> </a>
-									<a  href="<?php echo URL_BASE."reserva/excluir/".$reserva->idreserva ?>" class="btn btn-outline-danger" title="exlcluir"><img src="<?php echo URL_BASE."assets/img/deletar.png"?>" alt=""></a>
+									<a   href="<?php echo URL_BASE."reserva/edit/".$reserva->idreserva ?>" class=" btn btn-outline-warning" title="Editar"> <img src="<?php echo URL_BASE."assets/img/editar.png"?>" width="40" heigth="40" alt=""> </a>
+									<a  href="<?php echo URL_BASE."reserva/excluir/".$reserva->idreserva ?>" class="btn btn-outline-danger" title="exlcluir"><img width="40" heigth="40" src="<?php echo URL_BASE."assets/img/deletar.png"?>" alt=""></a>
 								</td>
 							</tr>
 							<?php } ?>	
