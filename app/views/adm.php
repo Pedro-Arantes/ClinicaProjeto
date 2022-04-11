@@ -93,10 +93,24 @@ $objCount->IniciarContagem();
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="<?php echo URL_BASE ?>/index.php">Pagina Inicial</a></li>
-          <li><a  class="nav-link scrollto " href="<?php echo URL_BASE."paciente/create" ?>">Novo Paciente</a></li>
-          <li><a class="nav-link scrollto " href="<?php echo URL_BASE ."Paciente" ?>">Lista de Pacientes</a></li>
-          <li><a  class="nav-link scrollto " href="<?php echo URL_BASE."cadastro/create" ?>">Novo Cadastro</a></li>
-          <li><a class="nav-link scrollto " href="<?php echo URL_BASE ."cadastro" ?>">Lista de Cadastros</a></li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Listas e Cadastros
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a  class="dropdown-item " href="<?php echo URL_BASE."paciente/create" ?>">Novo Paciente</a>
+            <a class="dropdown-item " href="<?php echo URL_BASE ."Paciente" ?>">Lista de Pacientes</a>
+            <div class="dropdown-divider"></div>
+            <a  class="dropdown-item " href="<?php echo URL_BASE."cadastro/create" ?>">Novo Cadastro</a>
+            <a class="dropdown-item " href="<?php echo URL_BASE ."cadastro" ?>">Lista de Cadastros</a>
+          </div>
+          
+          <li><a  class="nav-link scrollto " href="<?php echo URL_BASE."reserva/create" ?>">Nova Reserva</a></li>
+          <li><a class="nav-link scrollto " href="<?php echo URL_BASE ."Reserva" ?>">Lista de Reservas</a></li>
+          
+          
+          <li></li>
+          <li></li>
           
 
           
@@ -703,6 +717,9 @@ $objCount->IniciarContagem();
 
   <!-- Template Main JS File -->
   <script src="<?php echo URL_BASE ?>assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
   

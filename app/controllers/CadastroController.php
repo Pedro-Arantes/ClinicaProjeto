@@ -36,6 +36,11 @@ class CadastroController extends Controller{
       $this->load("template",$dados);
        
    }
+   public function createuser(){
+      $dados["view"] = "Cadastro/createUser";
+      $this->load("template",$dados);
+       
+   }
 
    public function salvar(){
     
